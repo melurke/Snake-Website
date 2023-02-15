@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --white: #f8f1ff;
+    --black: #181d20;
+    --blue: #1a8fe3;
+    --green: #96e6b3;
+    --dark-blue: #1368A4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    list-style: none;
+    text-decoration: none;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: "Montserrat", sans-serif;
+}
+
+.content {
+    font-size: 17px;
+    margin-left: 16px;
+}
+
+header {
+    padding: 0 20px;
+    background-color: var(--black);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name_container {
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.name_container h1 {
+    color: var(--blue);
+    background-color: var(--black);
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.name_container h1 span {
+    font-weight: 200;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.code {
+    background-color: #e1e0e4;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 3px;
+}
+
+ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--black);
+}
+
+ul a {
+    color: var(--white);
+    background-color: var(--black);
+    font-family: "Montserrat", sans-serif;
+    transition: 0.4s;
+}
+
+ul li {
+    padding: 5px;
+    margin-left: 10px;
+    background-color: var(--black);
+}
+
+ul li:hover {
+    transition: 0.4s;
+    color: var(--blue);
+}
+
+.hamburger_icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger_icon div {
+    width: 35px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+  
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile_menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.mobile_menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+    background-color: var(--black);
+    z-index: 1;
+}
+
+.mobile_menu li {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+
+    .hamburger_icon {
+        display: block;
+    }
+}
+
+img {
+    max-width: 1000px;
+    width: 80%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+.important_list a {
+    color: var(--green);
+}
+
+.transition_link {
+    transition: 0.4s;
+}
+
+a:hover {
+    color: var(--blue);
+}
+
+.content hr {
+    margin-left: -16px;
+    color:#e1e0e4;
+}
+
+.important {
+    color: var(--blue);
+}
+
+.content li {
+    margin-left: 16px;
+    list-style: disc;
+}
+
+.headline1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.headline2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.headline3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button_container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.inner_button_container {
+    position: relative;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 15px;
+    transition: 0.4s;
+
+    color:  var(--blue);
+    border: 3px solid var(--blue);
+
+    display: flex;
+    align-items: center;
+}
+
+.button:hover {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.box {
+    width: 45%;
+    border-radius: 16px;
+    padding: 20px;
+    background-color:var(--blue);
+    color:var(--white);
+    box-shadow: 0 0px 8px var(--blue);
+}
